@@ -1,6 +1,6 @@
-#Spring MVC配置静态资源和资源包
+# Spring MVC配置静态资源和资源包
 
-###本项目实现了maven构建spring mvc的web工程
+### 本项目实现了maven构建spring mvc的web工程
 
 **主要功能**
 - 用maven构建，配置项目
