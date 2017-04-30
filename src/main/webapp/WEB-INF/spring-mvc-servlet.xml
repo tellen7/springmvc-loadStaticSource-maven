@@ -12,11 +12,15 @@
       http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
  
     <!-- Package Scan -->
+    <!-- 设置使用注解的类所在的jar包 -->
     <context:component-scan base-package="com.laowang.springmvc" />
      
     <!-- Enables the Spring MVC Annotation Configuration -->
+    <!-- 启用spring mvc 注解 -->
     <context:annotation-config />
      
+    
+    
     <!-- Important!! -->
     <!-- Default Servlet Handler (For Resources *.css, *.js, image,..) -->
     <mvc:default-servlet-handler />
@@ -33,9 +37,10 @@
         </property>
     </bean>
  
+ 
+ 
     <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
- 
         <property name="prefix">
             <value>/WEB-INF/pages/</value>
         </property>

@@ -5,29 +5,43 @@
    version="3.0">
  
    <display-name>Archetype Created Web Application</display-name>
+   
+	<!-- <welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list> 不添加也能显示-->
+   
    <servlet>
        <servlet-name>spring-mvc</servlet-name>
        <servlet-class>
            org.springframework.web.servlet.DispatcherServlet
        </servlet-class>
+       <!-- 可以自定义servlet.xml配置文件的位置和名称，默认为WEB-INF目录下，名称为[<servlet-name>]-servlet.xml，如spring-mvc-servlet.xml
+       spring mvc上下文加载位置和配置文件
+	    <init-param>
+	        <param-name>contextConfigLocation</param-name>
+	        <param-value>/WEB-INF/spring-mvc-servlet.xml</param-value>
+	    </init-param>
+       -->
+       <!-- tomcat启动后立即加载 -->
        <load-on-startup>1</load-on-startup>
    </servlet>
- 
    <servlet-mapping>
        <servlet-name>spring-mvc</servlet-name>
        <url-pattern>/</url-pattern>
    </servlet-mapping>
  
+
    <!-- Other XML Configuration -->
    <!-- Load by Spring ContextLoaderListener -->
+   <!-- 指定Spring Bean的配置文件所在目录。默认配置在WEB-INF目录下 -->
+   <!-- spring 上下文创建（容器） -->
    <context-param>
        <param-name>contextConfigLocation</param-name>
        <param-value>
           /WEB-INF/root-context.xml
         </param-value>        
    </context-param>
- 
- 
+
    <!-- Spring ContextLoaderListener -->
    <listener>
        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
