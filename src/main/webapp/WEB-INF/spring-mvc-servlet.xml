@@ -16,7 +16,7 @@
     <context:component-scan base-package="com.laowang.springmvc" />
      
     <!-- Enables the Spring MVC Annotation Configuration -->
-    <!-- 启用spring mvc 注解 -->
+    <!-- 启用spring mvc 注解，上面的标签已经包含了下面的标签，下面的标签完全可以删除 -->
     <context:annotation-config />
      
     
